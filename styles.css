@@ -1,0 +1,13 @@
+body {
+  font-family: "Monaco";
+  font-weight: bold;
+  /* Off White */
+  background-color: #FAF9F6;
+}
+img {
+  border-radius: 50%;
+}
+.center {
+  margin-top: 2em;
+  text-align: center;
+}
