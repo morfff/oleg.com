@@ -1,16 +1,132 @@
-body {
-  font-family: "Monaco";
-  font-weight: bold;
-  /* Off White */
-  /* background-color: #FAF9F6; */
-  /* background-color: #FDFCFA; */
-  background-color: #FEFDFB;
-  /* background-color: #FEFDFC; */
+@import url("/fonts/fonts.css");
+
+:root {
+  --off-black: #323232;
+  --off-red: #EF0000;
+  --off-white: #FAF9F6;
+  /* --off-white:  #FDFCFA; */
+  /* --off-white:  #FEFDFB; */
+  /* --off-white:  #FEFDFC; */
+
+  --font: "Noto Sans", sans-serif;
+	--font-regular-weight: 400;
+  --font-bold-weight: 700;
+  --monospace-font: "Source Code Pro", monospace;
+	--monospace-font-weight: 400;
 }
+
 img {
   border-radius: 50%;
 }
+
 .center {
   margin-top: 2em;
   text-align: center;
+}
+
+header,
+body {
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+
+  /* Off White */
+  background-color: var(--off-white);
+}
+
+/* padding between list elements */
+li {
+  margin: 0.5em;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1em;
+  max-width: 80ch;
+}
+
+.tab-space {
+  display: inline-block;
+  width: 1em;
+}
+
+/* Navigation bar */
+
+.navbar {
+  /* Off Black */
+  background-color: var(--off-black);
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Center the items when they wrap */
+}
+
+.navbar li {
+  display: inline-block;
+  /* This makes the items sit next to each other */
+  margin: 0 10px;
+}
+
+.navbar li a {
+  display: block;
+  color: var(--off-white);
+  padding: 20px 0px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* Styles for the active nav link */
+nav ul li a.active {
+  color: var(--off-red);
+}
+
+.navbar li a:hover {
+  color: var(--off-red);
+}
+
+/* Links */
+/* Style for regular links */
+a {
+  color: inherit;
+  /* This will make the link inherit the color of its parent. You can also set a specific color if desired, e.g., black. */
+  text-decoration: underline;
+  transition: color 0.25s ease;
+  /* Optional: smooth color transition */
+}
+
+/* Style for link hover state */
+a:hover {
+  color: var(--off-red);
+}
+
+/* Button */
+/* Base button styles */
+.button {
+  display: inline-block;
+  background-color: var(--off-black);
+  color: var(--off-white);
+  padding: 10px 20px;
+  /* Adjust for desired button size */
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  text-align: center;
+  text-decoration: none;
+  /* In case you use this class with an anchor */
+}
+
+/* Hover state for the button */
+.button:hover {
+  color: var(--off-red);
+  background-color: var(--off-black);
 }

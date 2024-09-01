@@ -43,18 +43,43 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      .form-container {
+        max-width: 500px;
+        /* Adjust this value for your desired form width */
+        margin: 0 auto;
+        /* Centers the form container horizontally */
+        padding: 20px;
+        /* Gives some spacing inside the container */
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+        /* Optional: adds a slight shadow around the form for visual depth */
+      }
+
+      .vertical-form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .vertical-form input,
+      .vertical-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
 
   <!-- TODO: Add commented out pages once I add content. -->
-  <!-- TODO: Make the navigation bar sticky when I scroll. -->
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="/" class="active">HOME</a></li>
+        <li><a href="/">HOME</a></li>
         <li><a href="/projects/">PROJECTS</a></li>
         <li><a href="/resume/">RESUME</a></li>
         <li><a href="/blog/">BLOG</a></li>
-        <li><a href="/newsletter/">NEWSLETTER</a></li>
+        <li><a href="/newsletter/" class="active">NEWSLETTER</a></li>
         <li><a href="/contact/">CONTACT</a></li>
       </ul>
     </nav>
@@ -62,18 +87,19 @@
 
   <body>
     <div class="center">
-      <img src="avatar.jpeg" width="320" height="320" alt="Avatar" />
-      <font size="5">
-        <p><b>Hi, I'm Oleg Morfiianets.</b></p>
-      </font>
-      <p>
-        Connect with me on
-        <a href="https://linkedin.com/in/morfff" target="_blank" rel="me"
-          >LinkedIn</a
-        >
-        and
-        <a href="https://github.com/morfff" target="_blank" rel="me">Github</a>.
-      </p>
+      <p>TODO: Explain what newsletter I send out and how often etc.</p>
+    </div>
+    <div class="form-container">
+      <form
+        action="https://buttondown.email/api/emails/embed-subscribe/oleg"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/oleg', 'popupwindow')"
+        class="vertical-form">
+        <label for="bd-email">Email:</label>
+        <input type="email" name="email" id="bd-email" />
+        <input type="submit" value="Subscribe" class="button" />
+      </form>
     </div>
   </body>
 </html>
