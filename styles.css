@@ -24,7 +24,8 @@ body {
 /* Light Mode Styles */
 @media (prefers-color-scheme: light) {
   header,
-  body {
+  body,
+  nav {
     background-color: white;
     color: black;
   }
@@ -33,7 +34,8 @@ body {
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   header,
-  body {
+  body,
+  nav {
     background-color: var(--off-black);
     color: var(--off-white);
   }
@@ -67,7 +69,6 @@ nav {
   height: 4.5rem;
   z-index: 1000; /* Ensures the navbar stays on top of other content */
   width: 100%; /* Ensures the navbar takes the full width */
-  background-color: white;
 }
 
 nav ul {
@@ -118,8 +119,8 @@ a:hover {
 
 /* Divider between links and social icons */
 .divider {
-  border-left: 1px solid #ddd; /* Divider style */
-  height: 24px;
+  border-left: 1px solid; /* Divider style */
+  height: 1.25rem;
   margin: 0 1rem; /* Space around the divider */
 }
 
