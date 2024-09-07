@@ -64,6 +64,7 @@ nav {
   position: sticky; /* Makes the nav bar sticky */
   position: -webkit-sticky;
   top: 0; /* Sticks the navbar to the top of the viewport */
+  height: 4.5rem; /* Assume the navbar height is 60px */
   z-index: 1000; /* Ensures the navbar stays on top of other content */
   width: 100%; /* Ensures the navbar takes the full width */
   background-color: white;
@@ -165,7 +166,7 @@ article {
   text-align: left; /* Ensure text is left-aligned inside the block */
 }
 
-/* Scrollbar */
+/* Progress bar */
 .progress {
   animation-timeline: scroll(root);
   animation-name: scaleProgress;
@@ -174,11 +175,12 @@ article {
   height: .5rem;
   background: var(--azure);
   position: fixed;
-  /* top: 0; */
-  /* left: 0; */
+  /* Progress bar stays on top of the nav bar, at the bottom of it. */
+  top: 4rem;
+  left: 0;
   width: 100%;
   transform-origin: 0 50%;
-  z-index: 1000;
+  z-index: 2000;
 }
 @keyframes scaleProgress {
   0% {
