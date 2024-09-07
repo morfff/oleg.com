@@ -2,17 +2,18 @@
 
 :root {
   --off-black: #323232;
-  --off-red: #EF0000;
-  --off-white: #FAF9F6;
+  --off-red: #ef0000;
+  --off-white: #faf9f6;
+  --azure: #017fc0;
   /* --off-white:  #FDFCFA; */
   /* --off-white:  #FEFDFB; */
   /* --off-white:  #FEFDFC; */
 
   --font: "Noto Sans", sans-serif;
-	--font-regular-weight: 400;
+  --font-regular-weight: 400;
   --font-bold-weight: 700;
   --monospace-font: "Source Code Pro", monospace;
-	--monospace-font-weight: 400;
+  --monospace-font-weight: 400;
 }
 
 img {
@@ -28,10 +29,10 @@ header,
 body {
   font-family: var(--font);
   margin: 0;
-  padding: 0;
+  padding: 0rem 2rem;
 
   /* Off White */
-  background-color: var(--off-white);
+  /* background-color: var(--off-white); */
 }
 
 /* padding between list elements */
@@ -57,9 +58,9 @@ li {
 
 .navbar {
   /* Off Black */
-  background-color: var(--off-black);
+  /* background-color: var(--off-black); */
   overflow: hidden;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .navbar ul {
@@ -78,7 +79,7 @@ li {
 
 .navbar li a {
   display: block;
-  color: var(--off-white);
+  /* color: var(--off-white); */
   padding: 20px 0px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -86,11 +87,13 @@ li {
 
 /* Styles for the active nav link */
 nav ul li a.active {
-  color: var(--off-red);
+  /* color: var(--off-red); */
+  text-decoration: underline;
 }
 
 .navbar li a:hover {
-  color: var(--off-red);
+  /* color: var(--off-red); */
+  text-decoration: underline;
 }
 
 /* Links */
@@ -105,7 +108,14 @@ a {
 
 /* Style for link hover state */
 a:hover {
-  color: var(--off-red);
+  color: var(--azure);
+}
+
+/* Divider between links and social icons */
+.divider {
+  border-left: 1px solid #ddd; /* Divider style */
+  height: 24px;
+  margin: 0 1rem; /* Space around the divider */
 }
 
 /* Button */
@@ -129,4 +139,16 @@ a:hover {
 .button:hover {
   color: var(--off-red);
   background-color: var(--off-black);
+}
+
+.social-icons {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* Styling for the name */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
