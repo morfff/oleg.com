@@ -98,7 +98,6 @@ nav ul li a.active {
 }
 
 nav li a:hover {
-  /* color: var(--off-red); */
   text-decoration: underline;
 }
 
@@ -150,12 +149,6 @@ a:hover {
 .social-icons {
   font-size: 1.5rem;
   text-decoration: none;
-}
-
-/* Styling for the name */
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 /* Container for article content */
