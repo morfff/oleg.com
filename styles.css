@@ -16,9 +16,15 @@
   --monospace-font-weight: 400;
 }
 
+header,
+body {
+  font-family: var(--font);
+}
+
 /* Light Mode Styles */
 @media (prefers-color-scheme: light) {
-  body, header {
+  header,
+  body {
     background-color: white;
     color: black;
   }
@@ -26,7 +32,8 @@
 
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
-  body, header {
+  header,
+  body {
     background-color: var(--off-black);
     color: var(--off-white);
   }
@@ -41,16 +48,6 @@ img {
   text-align: center;
 }
 
-header,
-body {
-  font-family: var(--font);
-  margin: 0;
-  padding: 0rem 2rem;
-
-  /* Off White */
-  /* background-color: var(--off-white); */
-}
-
 /* padding between list elements */
 li {
   margin: 0.5em;
@@ -63,14 +60,16 @@ li {
 
 /* Navigation bar */
 
-.navbar {
-  /* Off Black */
-  /* background-color: var(--off-black); */
-  overflow: hidden;
-  /* font-weight: bold; */
+nav {
+  position: sticky; /* Makes the nav bar sticky */
+  position: -webkit-sticky;
+  top: 0; /* Sticks the navbar to the top of the viewport */
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+  width: 100%; /* Ensures the navbar takes the full width */
+  background-color: white;
 }
 
-.navbar ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -78,15 +77,14 @@ li {
   /* Center the items when they wrap */
 }
 
-.navbar li {
+nav li {
   display: inline-block;
   /* This makes the items sit next to each other */
   margin: 0 10px;
 }
 
-.navbar li a {
+nav li a {
   display: block;
-  /* color: var(--off-white); */
   padding: 20px 0px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -94,11 +92,10 @@ li {
 
 /* Styles for the active nav link */
 nav ul li a.active {
-  /* color: var(--off-red); */
   text-decoration: underline;
 }
 
-.navbar li a:hover {
+nav li a:hover {
   /* color: var(--off-red); */
   text-decoration: underline;
 }
@@ -166,4 +163,28 @@ article {
   /* padding: 1rem; */
   line-height: 1.6; /* Improve readability */
   text-align: left; /* Ensure text is left-aligned inside the block */
+}
+
+/* Scrollbar */
+.progress {
+  animation-timeline: scroll(root);
+  animation-name: scaleProgress;
+  animation-duration: auto;
+  animation-timing-function: linear;
+  height: .5rem;
+  background: var(--azure);
+  position: fixed;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  transform-origin: 0 50%;
+  z-index: 1000;
+}
+@keyframes scaleProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
