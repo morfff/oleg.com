@@ -40,15 +40,6 @@ li {
   margin: 0.5em;
 }
 
-.content {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 1em;
-  max-width: 80ch;
-}
-
 .tab-space {
   display: inline-block;
   width: 1em;
@@ -151,4 +142,13 @@ a:hover {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+/* Container for article content */
+article {
+  max-width: 70ch; /* Approximate line length of 80 characters */
+  margin: 0 auto; /* Center the content horizontally */
+  /* padding: 1rem; */
+  line-height: 1.6; /* Improve readability */
+  text-align: left; /* Ensure text is left-aligned inside the block */
 }
